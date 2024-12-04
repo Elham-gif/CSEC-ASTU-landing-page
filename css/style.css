@@ -1,0 +1,270 @@
+/* Global styles for smooth transitions */
+@import url("global/boileplate.css");
+@import url("global/font.css");
+
+/* Header Styling with Glass Effect */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 16px;
+  position: fixed; /* Keeps the header fixed when scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Apply blur for glass effect */
+  border-radius: 15px; /* Rounded corners for smooth edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Button Styling */
+.buttons,
+.button-dark button,
+.button-pink,
+.button-purple button {
+  font-size: var(--fs-7);
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 10.5px 24px;
+  border-radius: 28px;
+  transition: all 150ms ease-in-out;
+}
+
+.button-dark button {
+  background-color: var(--color-blue-900); /* Dark blue background */
+  color: white;
+  border: none;
+  backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.button-dark button:hover {
+  opacity: 0.5; /* Hover effect */
+}
+
+.button-pink {
+  background: var(--gradient-pink); /* Gradient background */
+  color: white;
+  border: none;
+  display: inline-block;
+}
+
+.button-pink:hover {
+  opacity: 0.5; /* Hover effect */
+}
+
+.button-purple button {
+  background-color: var(--color-blue-900);
+  color: white;
+  border: none;
+  border-radius: 28px;
+}
+
+.button-purple button:hover {
+  background-color: var(--color-blue-600); /* Hover effect */
+}
+
+/* Wrapper Styling for Alignment */
+.wrapper {
+  padding-inline: 20px;
+}
+
+/* About Section */
+.about h1 {
+  font-size: 45px;
+  color: var(--color-blue-900);
+  margin-top: 120px; /* Adjust this value to create space for the fixed header */
+}
+
+.about {
+  display: flex; /* Flex layout for side-by-side content */
+  align-items: center; /* Vertically center the image and text */
+  column-gap: 30px;
+  margin-top: 10px;
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+  flex-shrink: 0;
+  width: 40%; /* Image width */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.about p {
+  font-size: 20px;
+  color: var(--color-dark-gray);
+  line-height: 1.8;
+  font-weight: 400;
+  font-family: "Georgia", serif;
+  text-align: justify;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.416);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about p:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.7); /* Hover background effect */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+  }
+
+  .about img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .about p {
+    width: 100%;
+  }
+
+  .courses .wrapper {
+    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+  }
+
+  .course-block {
+    padding: 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Courses Section Styling */
+.courses {
+  background: linear-gradient(#f0f1f0, #f0f1ff 50%);
+  padding-block: 84px 80px;
+}
+
+.courses .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  row-gap: 40px;
+  column-gap: 32px;
+}
+
+.course-block {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  overflow: hidden;
+}
+
+.course-block:hover {
+  transform: scale(1.05);
+}
+
+.course-block img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.course-block h3 {
+  font-size: 24px;
+  color: var(--color-blue-900);
+  margin: 10px 0;
+}
+
+.course-block p {
+  font-size: 16px;
+  color: var(--color-dark-gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.course-block a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #f0f1ff;
+  transition: background-color 0.3s ease;
+}
+
+.course-block a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Block Title Styling */
+.block-title {
+  background: var(--gradient-pink);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.block-title h2 {
+  font-size: 28px;
+  color: var(--color-blue-900);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: black;
+  padding: 40px 20px;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+/* Prevent footer from being affected by the header */
+body {
+  padding-top: 80px;
+}
