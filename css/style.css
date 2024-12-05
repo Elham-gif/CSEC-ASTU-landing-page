@@ -1,24 +1,24 @@
-/* Global styles for smooth transitions */
+
 @import url("global/boileplate.css");
 @import url("global/font.css");
 
-/* Header Styling with Glass Effect */
+
 .header {
   display: flex;
   justify-content: space-between;
   padding-block: 16px;
-  position: fixed; /* Keeps the header fixed when scrolling */
+  position: fixed; 
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
-  backdrop-filter: blur(10px); /* Apply blur for glass effect */
-  border-radius: 15px; /* Rounded corners for smooth edges */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  z-index: 1000; /* Ensure it's above other elements */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
 }
 
-/* Button Styling */
+
 .buttons,
 .button-dark button,
 .button-pink,
@@ -32,25 +32,25 @@
 }
 
 .button-dark button {
-  background-color: var(--color-blue-900); /* Dark blue background */
+  background-color: var(--color-blue-900); 
   color: white;
   border: none;
-  backdrop-filter: blur(10px); /* Glass effect */
+  backdrop-filter: blur(10px); 
 }
 
 .button-dark button:hover {
-  opacity: 0.5; /* Hover effect */
+  opacity: 0.5; 
 }
 
 .button-pink {
-  background: var(--gradient-pink); /* Gradient background */
+  background: var(--gradient-pink); 
   color: white;
   border: none;
   display: inline-block;
 }
 
 .button-pink:hover {
-  opacity: 0.5; /* Hover effect */
+  opacity: 0.5; 
 }
 
 .button-purple button {
@@ -61,24 +61,22 @@
 }
 
 .button-purple button:hover {
-  background-color: var(--color-blue-600); /* Hover effect */
+  background-color: var(--color-blue-600); 
 }
 
-/* Wrapper Styling for Alignment */
 .wrapper {
   padding-inline: 20px;
 }
 
-/* About Section */
 .about h1 {
   font-size: 45px;
   color: var(--color-blue-900);
-  margin-top: 120px; /* Adjust this value to create space for the fixed header */
+  margin-top: 120px; 
 }
 
 .about {
-  display: flex; /* Flex layout for side-by-side content */
-  align-items: center; /* Vertically center the image and text */
+  display: flex; 
+  align-items: center; 
   column-gap: 30px;
   margin-top: 10px;
   padding: 20px 0;
@@ -88,12 +86,12 @@
 }
 
 .about img {
-  max-width: 100%; /* Ensure image is responsive */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; 
+  height: auto; 
   border-radius: 15px;
   flex-shrink: 0;
-  width: 40%; /* Image width */
-  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  width: 40%; 
+  transition: transform 0.3s ease-in-out; 
 }
 
 .about p {
@@ -113,13 +111,12 @@
 
 .about p:hover {
   transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.7); /* Hover background effect */
+  background-color: rgba(255, 255, 255, 0.7); 
 }
 
-/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   .about {
-    flex-direction: column; /* Stack image and text vertically */
+    flex-direction: column; 
     align-items: center;
   }
 
@@ -133,7 +130,7 @@
   }
 
   .courses .wrapper {
-    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    grid-template-columns: 1fr 1fr; 
   }
 
   .course-block {
@@ -151,7 +148,7 @@
   }
 }
 
-/* Courses Section Styling */
+
 .courses {
   background: linear-gradient(#f0f1f0, #f0f1ff 50%);
   padding-block: 84px 80px;
@@ -159,7 +156,7 @@
 
 .courses .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  grid-template-columns: repeat(3, 1fr); 
   row-gap: 40px;
   column-gap: 32px;
 }
@@ -214,7 +211,6 @@
   color: white;
 }
 
-/* Block Title Styling */
 .block-title {
   background: var(--gradient-pink);
   padding: 20px;
@@ -236,7 +232,7 @@
   margin: 0;
 }
 
-/* Footer Styling */
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -264,7 +260,7 @@
   color: #dcdcdc;
 }
 
-/* Prevent footer from being affected by the header */
+
 body {
   padding-top: 80px;
 }
